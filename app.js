@@ -1,9 +1,30 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const a = 10;
-let b;
-b = 12.5;
-const sayHello = (message) => {
-    console.log(message + ' ' + 'Edwin');
+// Funciones Básicas
+var sumar = function (a, b) {
+    return a + b;
 };
-//# sourceMappingURL=app.js.map
+var contar = function (heroes) {
+    return heroes.length;
+};
+var superHeroes = ["Flash", "Arrow", "Superman", "Linterna Verde"];
+contar(superHeroes);
+//Parametros por defecto
+var llamarBatman = function (llamar) {
+    if (llamar) {
+        console.log("Batiseñal activada");
+    }
+};
+llamarBatman(true);
+// Rest?
+var unirheroes = function () {
+    var personas = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        personas[_i] = arguments[_i];
+    }
+    return personas.join(", ");
+};
+// Tipo funcion
+var noHaceNada = function (numero, texto, booleano, arreglo) { };
+// Crear el tipo de funcion que acepte la funcion "noHaceNada"
+var noHaceNadaTampoco;
+noHaceNadaTampoco = noHaceNada;
